@@ -7,6 +7,11 @@ pipeline {
                 sh 'echo hello'
                 
             }
+        stage('deploy') {
+            steps{
+                sh 'docker build -t jenkins:jcasc .'
+            }
+        }
         }
     }
 }
