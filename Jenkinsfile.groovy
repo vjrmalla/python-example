@@ -16,7 +16,7 @@ pipeline
         {
             steps
             {
-                sh 'docker build -t jenkins:jcasc .'
+                sh 'whoami'
             }
         }
         
