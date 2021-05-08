@@ -16,7 +16,7 @@ pipeline
         {
             steps
             {
-                sh 'docker run --name my-webapp --rm -p 5000:5000 web-app:latest'
+                sh 'docker run -d --name my-webapp --rm -p 5000:5000 web-app:latest'
             }
         }
         
