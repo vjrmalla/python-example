@@ -8,7 +8,7 @@ pipeline
         {
             steps 
             {
-                sh 'echo hello'
+                sh 'docker build -t web-app:latest .'
                 
             }
         }
@@ -16,7 +16,7 @@ pipeline
         {
             steps
             {
-                sh 'whoami'
+                sh 'docker run --name my-webapp --rm -p 5000:5000 web-app:latest'
             }
         }
         
