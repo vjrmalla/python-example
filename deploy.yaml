@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels:
+    app: python-mywebb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-mywebb
+  template:
+    metadata:
+      labels:
+        app: python-mywebb
+    spec:
+      containers:
+      - name: python-mywebb
+        image: vmalla/python-webapp
+        ports:
+        - containerPort: 5000
